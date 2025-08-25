@@ -1,0 +1,6 @@
+# -= Lista de Dependências Principais =-
+# Use 'pip-compile requirements.in' para gerar o requirements.txt
+
+numpy
+scipy
+matplotlib
