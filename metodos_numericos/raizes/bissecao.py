@@ -88,7 +88,9 @@ def bissecao():
         return None
 
     k_parada = num_iteracoes(a, b, precisao)
-    print(f"Número de iterações máxima: {k_parada}")
+    print("="*80)
+    print(f">>>>>Número de iterações máxima: {k_parada}")
+    print("="*80)
 
     tabela_bissecao()
 
@@ -100,7 +102,9 @@ def bissecao():
         imprimir_resultado(k, a, b, xn, fa, fxn)
 
         if abs(fxn) < precisao:
-            print(f"Solução encontrada: x = {xn:.4f}, f(x) = {fxn:.4f}")
+            print("="*25 + "[Critério de parada atingido.]" + "="*25)
+            print(f">>>>>Solução encontrada: x = {xn:.4f}, f(x) = {fxn:.4f}")
+            print("="*80)
             return xn
 
         if fa * fxn < 0:
@@ -108,5 +112,7 @@ def bissecao():
         else:
             a = xn
 
-    print("Número máximo de iterações atingido.")
+    print("="*25 + "[Número máximo de iterações atingido.]" + "="*25)
+    print(f">>>>>Número máximo de iterações: {k_parada}")
+    print("="*80)
     return None
