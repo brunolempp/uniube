@@ -33,13 +33,13 @@ def entrada_precisao():
 
 def tabela_bissecao():
     print("Tabela de Bisseção")
-    print("-------------------")
-    print("|Iteração|\t  |a|\t |b|\t |xn|\t |f(a)|\t |f(xn)|")
-    print("-------------------")
+    print("="*80)
+    print("|Iteração| ===== |a| ===== |b| ===== |xn| ===== |f(a)| ===== |f(xn)|")
+    print("="*80)
 
 def imprimir_resultado(iteracao, a, b, xn, fa, fxn):
-    print(f"|{iteracao}|\t |{a}|\t |{b}|\t |{xn}|\t |{fa}|\t |{fxn}|")
-    print("-------------------")
+    print(f"|{iteracao}| ===== |{a:.4f}| ===== |{b:.4f}| ===== |{xn:.4f}| ===== |{fa:.4f}| ===== |{fxn:.4f}|")
+    print("="*80)
 
 
 def bissecao():
@@ -63,8 +63,8 @@ def bissecao():
 
         imprimir_resultado(k, a, b, xn, fa, fxn)
 
-        if abs(fxn) < abs(precisao):
-            print(f"Solução encontrada: x = {xn}, f(x) = {fxn}")
+        if abs(fxn) < precisao:
+            print(f"Solução encontrada: x = {xn:.4f}, f(x) = {fxn:.4f}")
             return xn
 
         if fa * fxn < 0:
