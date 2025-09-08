@@ -1,1 +1,2 @@
 from utils.conversor_str_funcao import conversor_str_funcao
+from utils.conversor_str_funcao import derivada_funcao
